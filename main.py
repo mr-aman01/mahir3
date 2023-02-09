@@ -79,10 +79,12 @@ async def restart_handler(_, m):
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
-@bot.on_message(filters.command(["txt"]) & (filters.chat(sudo_groups)))
+@bot.on_message(filters.command(["txt"])&   (filters.chat(sudo_groups)))
 async def account_login(bot: Client, m: Message):
 
-    editable = await m.reply_text("Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nSend **TXT** File :- ")
+    editable = await m.reply_text(
+            "Hello Bruh I am **Text Downloader Bot**.\nI can download videos from **text** file one by one.\n\n**Developer** : DRAGO\n**Language** : Python\n**Framework** : 🔥 Pyrogram\n\nSend **TXT** File :-"
+       ,reply_markup=keyboard)
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
