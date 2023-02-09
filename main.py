@@ -83,7 +83,7 @@ async def restart_handler(_, m):
 async def account_login(bot: Client, m: Message):
 
         editable = await m.reply_text(
-            "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : NAAM TO SUNA HOGA**\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File :- )
+            "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : NAAM TO SUNA HOGA**\nLanguage** : Python**\nFramework** : Pyrogram\n\nSend **TXT** File :- ")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
