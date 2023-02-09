@@ -48,20 +48,6 @@ bot = Client(
 #sudo_groups = [
 #    int(chat) for chat in os.environ.get("GROUPS").split(",") if chat != '']
 #
-Keyboard = InlineKeyboardMarkup(
-    [
-        [
-            InlineKeyboardButton(
-                text="Devloper",
-                url="https://pornhub.com/",
-            ),
-            InlineKeyboardButton(
-                text="Repo",
-                url="https://lund-chushLoo.com/repo",
-            ),
-        ],
-    ]
-)
 
 
 @bot.on_message(filters.command(["cancel"]))
@@ -83,8 +69,7 @@ async def restart_handler(_, m):
 async def account_login(bot: Client, m: Message):
 
     editable = await m.reply_text(
-            "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : Unknown**\nLanguage** : Python**\nFramework** : 🔥 Pyrogram\n\nSend **TXT** File {Name : Link}"
-       ,reply_markup=keyboard)
+            "Hello Bruh **I am Text Downloader Bot**. I can download videos from **text** file one by one.**\n\nDeveloper** : Unknown**\nLanguage** : Python**\nFramework** : 🔥 Pyrogram\n\nSend **TXT** File {Name : Link}")
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
