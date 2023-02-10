@@ -355,7 +355,7 @@ async def account_login(bot: Client, m: Message):
                         await m.reply_document(
                             ka,
                             caption=
-                            f"**{str(count).zfill(3)}»** {name1}.pdf\n**Batch »** {raw_text0}"
+                            f"**{str(count).zfill(3)}»** {name1}.pdf\n\n**Batch »** {raw_text0}"
                         )
                         count += 1
                         # time.sleep(1)
