@@ -322,7 +322,7 @@ async def account_login(bot: Client, m: Message):
             try:
                 Show = f"**Downloading:-**\n\n**Name :-** `{name}\nQuality - {raw_text2}`\n\n**Url :-** `{url}`"
                 prog = await m.reply_text(Show)
-                cc = f"**{str(count).zfill(3)} »** {name1} {res}.mkv"
+                cc = f"**{str(count).zfill(3)} »** {name1} @sewa_sadan {res}.mkv"
                 cc1 = f"**{str(count).zfill(3)} »** {name1} {res}.pdf"
                 #                         await prog.delete (True)
                 #                 if cmd == "pdf" or "drive" in url:
@@ -355,7 +355,7 @@ async def account_login(bot: Client, m: Message):
                         await m.reply_document(
                             ka,
                             caption=
-                            f"**{str(count).zfill(3)}»** {name1}.pdf\n\n**Batch »** {raw_text0}"
+                            f"**{str(count).zfill(3)}»** {name1} @sewa_sadan.pdf"
                         )
                         count += 1
                         # time.sleep(1)
